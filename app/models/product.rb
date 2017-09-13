@@ -1,11 +1,11 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_one :sale, :dependent => :destroy
-  has_many :order_detail
-  has_many :order, through: :order_detail
+  has_one :sale, dependent: destroy
+  has_many :order_details
+  has_many :orders, through: :order_detail
 
-  validates_associated :order_detail
-  validates_associated :order
+  validates_associated :order_details
+  validates_associated :orders
   validates_associated :sale
 
   validates :category_id, presence: true
