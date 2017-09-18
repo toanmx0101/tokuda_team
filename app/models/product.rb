@@ -3,7 +3,6 @@ class Product < ApplicationRecord
   has_one :sale, dependent: :destroy
   has_many :order_details
   has_many :orders, through: :order_detail
-
   validates_associated :order_detail
   validates_associated :order
   validates_associated :sale
