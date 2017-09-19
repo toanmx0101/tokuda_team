@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.\.]*xyz\.com\z/i
-  has_many :order
+  has_many :orders
 
   validates_associated :orders
 
