@@ -1,12 +1,11 @@
 class User < ApplicationRecord
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.\.]*xyz\.com\z/i
   has_many :orders
 
   validates_associated :orders
-
-  validates :name, presence: true, length: {maximum: 50}
-  validates :email, presence: true, uniqueness: true, confirmation: true,
-    format: { with: VALID_EMAIL_REGEX }, uniqueness: {case_sensitive: false}
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+  validates :email, presence:   true, length: { maximum: 255 },
+                    format:     { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, length: {minimum: 6}, confirmation: true,
     allow_nil: true
   validates :phone, presence: true, length: {minimum: 9, maximum: 15},
