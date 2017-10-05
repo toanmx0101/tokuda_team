@@ -1,13 +1,10 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-<%= devise_error_messages! %>
 
 <div class="all">
   <div class="signup">
     <div class="signup-connect">
       <h1>Info Profile</h1>
       <div class="form">
-
-
         <fieldset class="name">
           <%= f.text_field :name, autofocus: true, placeholder: "Full Name" %>
         </fieldset>
@@ -23,9 +20,7 @@
         <div class="field">
           <%= f.label :avatar, "Profile Image" %><br />
           <%= f.file_field :avatar %>
-        </div>
-
-        <br>
+        </div><br />
 
         <div class="field">
           <%= f.label :sex, "Gioi Tinh:" %><br />
@@ -34,15 +29,12 @@
           <%= f.radio_button :sex, :false %>
           <%= f.label :sex, "Nu" %>
         </div>
-
-
       </div>
     </div>
+
     <div class="signup-classic">
+      <%= devise_error_messages! %>
       <div class="form add-form">
-
-
-
         <fieldset class="email">
           <%= f.email_field :email, placeholder: "Email adress" %>
         </fieldset>
@@ -52,7 +44,7 @@
         </fieldset>
 
         <fieldset class="password">
-          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Password confirmation" %>
         </fieldset>
 
         <div class="actions">
@@ -60,7 +52,6 @@
         </div>
 
         <%= render "devise/shared/links" %>
-
       </div>
     </div>
   </div>

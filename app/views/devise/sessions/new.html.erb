@@ -9,7 +9,6 @@
   <div class="signin-classic">
     <h2>Or use the classical way</h2>
 
-
     <%= form_for(resource, as: resource_name, url: session_path(resource_name),html: { class: :form }) do |f| %>
     <fieldset class="email">
       <%= f.email_field :email, placeholder: "email", autofocus: true %>
