@@ -12,7 +12,6 @@ body {
   background: hsl(86, 85%, 95%);
 }
 
-
 /*--------------------
 Buttons
 --------------------*/
@@ -77,7 +76,6 @@ Buttons
   background-color: hsl(86, 61%, 44%);
 }
 
-
 /*--------------------
 Form
 --------------------*/
@@ -101,7 +99,6 @@ Form
       box-shadow: inset 0 1px 4px hsla(0, 0, 0, 0.2);
       vertical-align: top;
     }
-
   }
 
   button {
@@ -116,8 +113,6 @@ Form
   }
 
 }
-
-
 
 /*--------------------
 Signin
@@ -164,8 +159,12 @@ Signin
     font-weight: normal;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-shadow: 0 2px 3px hsla(0, 0, 0, 0.1);
+  }
+
+  p {
+    text-align: center;
   }
 
   fieldset::after {
@@ -187,7 +186,6 @@ Signin
   fieldset.password::after {
     content: '\f023';
   }
-
 }
 
 #forgot-password{
